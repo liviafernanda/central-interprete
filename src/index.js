@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 import { Rotas } from './Componentes/Rotas';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <Router>
     <Rotas />
-  </BrowserRouter>,
+  </Router>,
   document.getElementById('root')
 );
 
