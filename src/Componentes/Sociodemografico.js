@@ -15,7 +15,7 @@ class Sociodemografico extends Component {
                
                   <AppBar position="relative" title="Enter User Details" >
                     <Toolbar>
-                    <QuestionAnswer />
+                    <QuestionAnswer style={{ marginRight: "8px"}} />
                       <Typography variant="h5"> Questionário Sociodemografico </Typography>
                     </Toolbar>
                   </AppBar>
