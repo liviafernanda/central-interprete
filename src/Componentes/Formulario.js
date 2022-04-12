@@ -92,7 +92,9 @@ class Formulario extends Component {
                             src={video1}
                             videoId="video1"
                             />
-                            <Typography variant="body1">Coloque as informações sobre a aula</Typography>
+                            <Tooltip arrow title={<Typography fontSize={30}>Informar local e assunto da aula</Typography>}>
+                                <Typography variant="body1" id="etiquetaInformacoes">Coloque as informações sobre a aula</Typography>
+                            </Tooltip>
 
                             <TextField
                             placeholder="Local da aula"
@@ -116,7 +118,9 @@ class Formulario extends Component {
                         <Player 
                             playsInline
                             src={video2} videoId="video2"/>
-                        <Typography variant="body1">Coloque o dia e a hora da aula</Typography>
+                        <Tooltip arrow title={<Typography fontSize={30}>Informar a data da aula, a hora inicial e a hora final</Typography>}>
+                            <Typography id="etiquetaData" variant="body1">Coloque o dia e a hora da aula</Typography>
+                        </Tooltip>
                         <TextField
                             placeholder="Digite a data"
                             id="data"
@@ -156,7 +160,9 @@ class Formulario extends Component {
                         <Player 
                             playsInline
                             src={video3} videoId="video3"/>
-                        <Typography variant="body1">Escolha o intérprete para a aula</Typography>
+                        <Tooltip arrow title={<Typography fontSize={30}>Escolha um intérprete em Libras</Typography>}>
+                            <Typography id="etiquetaInterprete" variant="body1">Escolha o intérprete para a aula</Typography>
+                        </Tooltip>
                         <br /> <br/>
                         <FormControl fullWidth>
                             <InputLabel variant="standard" htmlFor="interpretes">
@@ -188,7 +194,7 @@ class Formulario extends Component {
                                    pathname: "/confirmacao", 
                                    state: {localAula: this.state.localAula, assuntoAula: this.state.assuntoAula, dataAula: this.state.dataAula, horaInicial: this.state.horaInicial, horaFinal: this.state.horaFinal, interprete: this.state.interprete}
                                    }}>
-                                <Tooltip arrow title="Requerimento enviar">
+                                <Tooltip arrow title={<Typography fontSize={30}>Requerimento enviar</Typography>}>
                                 <Button
                                 onClick={this.camposVazios}
                                 color="primary"
